@@ -41,10 +41,10 @@ def test_demo():
 
     # bufferFile
     bufferFile.create_file(sub_queue_dir_path + buffer_file, 3)
-    bufferFile.push_element(sub_queue_dir_path + buffer_file,'n1')
-    bufferFile.push_element(sub_queue_dir_path + buffer_file,'n2')
-    bufferFile.push_element(sub_queue_dir_path + buffer_file,'n3')
-    bufferFile.push_element(sub_queue_dir_path + buffer_file,'n4')
+    bufferFile.push_element(sub_queue_dir_path + buffer_file, 'n1')
+    bufferFile.push_element(sub_queue_dir_path + buffer_file, 'n2')
+    bufferFile.push_element(sub_queue_dir_path + buffer_file, 'n3')
+    bufferFile.push_element(sub_queue_dir_path + buffer_file, 'n4')
     print(bufferFile.consume_element(sub_queue_dir_path + buffer_file))
     print(bufferFile.consume_element(sub_queue_dir_path + buffer_file))
     print(bufferFile.consume_element(sub_queue_dir_path + buffer_file))
