@@ -9,10 +9,10 @@ def create_log(log_name):
     if not is_exists:
         with open(log_name, encoding='utf-8', mode='a') as file:
             file.close()
-        print(log_name + ' 创建成功')
+        print(log_name + ' created successfully')
         return True
     else:
-        print(log_name + ' 文件已存在')
+        print(log_name + ' file already exists')
         return False
 
 
@@ -23,7 +23,7 @@ def delete_log(log_name):
     log_name = strip_path(log_name)
     is_exists = os.path.exists(log_name)
     if not is_exists:
-        print(log_name + ' 文件不存在')
+        print(log_name + ' file does not exist')
         return False
     else:
         os.remove(log_name)
@@ -33,7 +33,7 @@ def delete_log(log_name):
 def move_log(old_log_name, new_log_name):
     old_log_name = strip_path(old_log_name)
     if not os.path.exists(old_log_name):
-        print(old_log_name + ' 旧文件不存在')
+        print(old_log_name + ' old file does not exist')
         return False
     else:
         shutil.move(old_log_name, new_log_name)
@@ -46,7 +46,7 @@ def read_log(log_name):
     log_name = strip_path(log_name)
     is_exists = os.path.exists(log_name)
     if not is_exists:
-        print(log_name + ' 文件不存在')
+        print(log_name + ' file does not exist')
         return
     with open(log_name, 'r') as file:
         content = file.read()

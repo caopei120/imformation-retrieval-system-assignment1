@@ -9,10 +9,10 @@ def create_dir(dir_path):
     is_exist = os.path.exists(dir_path)
     if not is_exist:
         os.makedirs(dir_path)
-        print(dir_path + ' 创建成功')
+        print(dir_path + ' created successfully')
         return True
     else:
-        print(dir_path + ' 目录已存在')
+        print(dir_path + ' directory already exists')
         return False
 
 
@@ -23,7 +23,7 @@ def delete_dir(dir_path):
     dir_path = strip_path(dir_path)
     is_exist = os.path.exists(dir_path)
     if not is_exist:
-        print(dir_path + ' 目录不存在')
+        print(dir_path + ' directory does not exist')
         return False
     for name in os.listdir(dir_path):
         file = os.path.join(dir_path, name)
@@ -41,7 +41,7 @@ def print_list(dir_path):
     dir_path = strip_path(dir_path)
     is_exist = os.path.exists(dir_path)
     if not is_exist:
-        print(dir_path + ' 目录不存在')
+        print(dir_path + ' directory does not exist')
         return False
     for name in os.listdir(dir_path):
         file = os.path.join(dir_path, name)
@@ -55,7 +55,7 @@ def get_file_list(dir_path):
     dir_path = strip_path(dir_path)
     is_exist = os.path.exists(dir_path)
     if not is_exist:
-        print(dir_path + ' 目录不存在')
+        print(dir_path + ' directory does not exist')
         return []
     file_list = []
     for name in os.listdir(dir_path):
@@ -70,7 +70,7 @@ def get_file_list(dir_path):
 def move_content(old_dir_path, new_dir_path):
     old_dir_path = strip_path(old_dir_path)
     if not os.path.exists(old_dir_path):
-        print(old_dir_path + ' 旧目录不存在')
+        print(old_dir_path + ' old directory does not exist')
         return False
     else:
         new_dir_path = strip_path(new_dir_path)

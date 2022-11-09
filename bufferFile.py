@@ -53,7 +53,7 @@ def create_file(file_name, size):
         write_q(file_name, q)
         return True
     else:
-        print(file_name + ' 文件已存在')
+        print(file_name + ' file already exists')
         return False
 
 
@@ -64,7 +64,7 @@ def delete_file(file_name):
     file_name = strip_path(file_name)
     is_exists = os.path.exists(file_name)
     if not is_exists:
-        print(file_name + ' 文件不存在')
+        print(file_name + ' file does not exist')
         return False
     else:
         os.remove(file_name)
@@ -76,7 +76,7 @@ def delete_file(file_name):
 def move_file(old_file_name, new_file_name):
     old_file_name = strip_path(old_file_name)
     if not os.path.exists(old_file_name):
-        print(old_file_name + ' 旧文件不存在')
+        print(old_file_name + ' old file does not exist')
         return False
     else:
         shutil.move(old_file_name, new_file_name)
